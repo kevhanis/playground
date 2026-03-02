@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Will You Be My Bridesmaid?</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(to bottom, #f9a8d4, #fbcfe8, #fde7f3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* background blobs */
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.5;
+    }
+    .blob.one { width: 380px; height: 380px; background: #f472b6; top: -120px; left: -120px; }
+    .blob.two { width: 380px; height: 380px; background: #fb7185; top: 30%; right: -120px; }
+    .blob.three { width: 300px; height: 300px; background: #f9a8d4; bottom: -60px; left: 30%; }
+
+    /* sparkle */
+    .sparkle {
+      position: absolute;
+      font-size: 20px;
+      animation: sparkle 2s ease-in-out forwards;
+    }
+    @keyframes sparkle {
+      0% { opacity: 0; transform: scale(0.5); }
+      50% { opacity: 1; transform: scale(1); }
+      100% { opacity: 0; transform: scale(0.5); }
+    }
+
+    /* card */
+    .container {
+      position: relative;
+      z-index: 2;
+      max-width: 420px;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(6px);
+      border-radius: 32px;
+      padding: 32px 28px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    p.subtitle {
+      color: #6b7280;
+      margin-bottom: 24px;
+    }
+
+    .message {
+      background: white;
+      border-radius: 24px;
+      padding: 24px;
+      margin-bottom: 24px;
+      color: #374151;
+      line-height: 1.6;
+    }
+
+    .heart {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    button {
+      border: none;
+      border-radius: 999px;
+      padding: 16px 28px;
+      font-size: 18px;
+      cursor: pointer;
+      background: linear-gradient(to right, #ec4899, #f472b6);
+      color: white;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(236,72,153,0.4);
+    }
+
+    .footer {
+      font-size: 12px;
+      color: #9ca3af;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="blob one"></div>
+  <div class="blob two"></div>
+  <div class="blob three"></div>
+
+  <div class="sparkle" style="top:20%; left:25%;">✨</div>
+  <div class="sparkle" style="top:35%; right:25%;">✨</div>
+  <div class="sparkle" style="bottom:30%; left:35%;">✨</div>
+
+  <div class="container">
+    <h1>Will You Be My Bridesmaid?</h1>
+    <p class="subtitle">
+      Girls, I can’t imagine my wedding journey without you 🤍<br />
+      So here I am, asking you in the most me way ✨
+    </p>
+
+    <div class="message">
+      <div class="heart">💗</div>
+      Thank you for being part of my life — from chaos to calm, laughs to tears 🤍
+      <br /><br />
+      I can’t imagine this wedding journey without you.
+      It would mean the world to me if you’d stand by my side and
+      create memories together as my bridesmaids 💐
+    </div>
+
+    <button onclick="alert('SHE SAID YES 💖✨')">YES, I’M IN 💖</button>
+
+    <div class="footer">Made with love by the bride ✨</div>
+  </div>
+
+</body>
+</html>
