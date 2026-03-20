@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Will You Be My Bridesmaid?</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500&display=swap"
+    rel="stylesheet">
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
@@ -25,9 +31,30 @@
       filter: blur(80px);
       opacity: 0.5;
     }
-    .blob.one { width: 380px; height: 380px; background: #f472b6; top: -120px; left: -120px; }
-    .blob.two { width: 380px; height: 380px; background: #fb7185; top: 30%; right: -120px; }
-    .blob.three { width: 300px; height: 300px; background: #f9a8d4; bottom: -60px; left: 30%; }
+
+    .blob.one {
+      width: 380px;
+      height: 380px;
+      background: #f472b6;
+      top: -120px;
+      left: -120px;
+    }
+
+    .blob.two {
+      width: 380px;
+      height: 380px;
+      background: #fb7185;
+      top: 30%;
+      right: -120px;
+    }
+
+    .blob.three {
+      width: 300px;
+      height: 300px;
+      background: #f9a8d4;
+      bottom: -60px;
+      left: 30%;
+    }
 
     /* sparkle */
     .sparkle {
@@ -35,10 +62,22 @@
       font-size: 20px;
       animation: sparkle 2s ease-in-out forwards;
     }
+
     @keyframes sparkle {
-      0% { opacity: 0; transform: scale(0.5); }
-      50% { opacity: 1; transform: scale(1); }
-      100% { opacity: 0; transform: scale(0.5); }
+      0% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      100% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
     }
 
     /* card */
@@ -46,18 +85,25 @@
       position: relative;
       z-index: 2;
       max-width: 420px;
-      background: rgba(255,255,255,0.85);
+      background: rgba(255, 255, 255, 0.85);
       backdrop-filter: blur(6px);
       border-radius: 32px;
       padding: 32px 28px;
       text-align: center;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
       animation: fadeUp 0.8s ease forwards;
     }
 
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     h1 {
@@ -98,7 +144,7 @@
 
     button:hover {
       transform: scale(1.05);
-      box-shadow: 0 10px 20px rgba(236,72,153,0.4);
+      box-shadow: 0 10px 20px rgba(236, 72, 153, 0.4);
     }
 
     .footer {
@@ -106,8 +152,27 @@
       color: #9ca3af;
       margin-top: 16px;
     }
+
+    .event {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid #f3f4f6;
+    }
+
+    .event-title {
+      font-weight: 600;
+      color: #ec4899;
+      margin-bottom: 4px;
+    }
+
+    .event-date {
+      font-size: 14px;
+      color: #6b7280;
+      margin-bottom: 12px;
+    }
   </style>
 </head>
+
 <body>
 
   <div class="blob one"></div>
@@ -132,6 +197,13 @@
       I can’t imagine this wedding journey without you.
       It would mean the world to me if you’d stand by my side and
       create memories together as my bridesmaids 💐
+      <div class="event">
+        <div class="event-title">Holy Matrimony 💍</div>
+        <div class="event-date">Nov 26, 2026</div>
+
+        <div class="event-title">Wedding Reception 🎉</div>
+        <div class="event-date">Nov 28, 2026</div>
+      </div>
     </div>
 
     <button onclick="alert('SHE SAID YES 💖✨')">YES, I’M IN 💖</button>
